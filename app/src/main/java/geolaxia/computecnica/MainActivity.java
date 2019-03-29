@@ -7,8 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.telephony.SmsManager;
+//import android.telephony.SmsManager;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -59,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
         try{
             mailService.sendMail(subject, body);
 
-            SmsManager smsManager = SmsManager.getDefault();
+            /*SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage("01158709193", null, body, null, null);
             smsManager.sendTextMessage("01136670275", null, body, null, null);
-            smsManager.sendTextMessage("01164182619", null, body, null, null);
+            smsManager.sendTextMessage("01164182619", null, body, null, null);*/
         }catch (Exception ex){
             ShowResult(false);
         }
